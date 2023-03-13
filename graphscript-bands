@@ -1,0 +1,11 @@
+set terminal svg
+set autoscale
+set ylabel "Energia [E]"
+#set xlabel "Momento [p]"
+set grid
+set output 'estrutura-de-bandas-hSiC.svg'
+set title "Estrutura de Bandas h-SiC"
+set object 1 rectangle from screen 0,0 to screen 1,1 fillcolor rgb"#FFFFFF" behind
+#set xrange [0:1.65]
+set xtics ("1st" 0.0000, "2nd"  0.5774, "3rd" 0.9107, "4th" 1.5773)
+plot "bands-data.gnu" using 1:($2 + 1.720) lt rgb "red" with lines title ""

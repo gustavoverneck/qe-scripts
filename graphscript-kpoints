@@ -1,0 +1,10 @@
+set terminal svg
+set autoscale
+set ylabel "Max Energy [Ry]"
+#set xlabel "K-points"
+set grid
+set output 'kpoints.svg'
+set title "Max Energy per K-points"
+set object 1 rectangle from screen 0,0 to screen 1,1 fillcolor rgb"#FFFFFF" behind
+set xrange [1:30]
+plot "B-kpoints" with lines title ""

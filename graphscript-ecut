@@ -1,0 +1,10 @@
+set terminal svg
+set autoscale
+set ylabel "Max Energy [Ry]"
+#set xlabel "Ecut [Ry]"
+set grid
+set output 'ecut.svg'
+set title "Max Energy per Ecut"
+set object 1 rectangle from screen 0,0 to screen 1,1 fillcolor rgb"#FFFFFF" behind
+set xrange [20:62]
+plot "B-ecut" with lines title ""
